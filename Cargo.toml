@@ -1,0 +1,17 @@
+[package]
+name = "coredump"
+version = "0.0.0"
+authors = ["Daniel Mueller <deso@posteo.net>"]
+edition = "2018"
+license = "GPL-3.0-or-later"
+homepage = "https://github.com/d-e-s-o/coredump"
+repository = "https://github.com/d-e-s-o/coredump.git"
+readme = "README.md"
+categories = ["development-tools::debugging", "os::unix-apis", "memory-management", "api-bindings"]
+keywords = ["coredump", "core", "dump", "panic", "debug"]
+description = """
+Force coredump creation on panics.
+"""
+
+[dependencies]
+libc = "0.2"
