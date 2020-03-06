@@ -7,6 +7,7 @@ coredump
 ========
 
 - [Documentation][docs-rs]
+- [Changelog](CHANGELOG.md)
 
 **coredump** is a crate to make a Rust program create a core dump when
 it encounters a panic.

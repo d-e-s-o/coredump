@@ -1,6 +1,6 @@
 // lib.rs
 
-// Copyright (C) 2019 Daniel Mueller <deso@posteo.net>
+// Copyright (C) 2019-2020 Daniel Mueller <deso@posteo.net>
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 //! A module for making the program dump core on panics (on a best
@@ -11,6 +11,7 @@ use std::convert::TryInto;
 use std::env::current_dir;
 use std::env::set_current_dir;
 use std::env::temp_dir;
+use std::error::Error as StdError;
 use std::fmt::Display;
 use std::fmt::Formatter;
 use std::fmt::Result as FmtResult;
@@ -38,6 +39,15 @@ type Str = Cow<'static, str>;
 pub enum Error {
   Io(IoError),
   Int(TryFromIntError),
+}
+
+impl StdError for Error {
+  fn source(&self) -> Option<&(dyn StdError + 'static)> {
+    match self {
+      Error::Io(err) => err.source(),
+      Error::Int(err) => err.source(),
+    }
+  }
 }
 
 impl Display for Error {
