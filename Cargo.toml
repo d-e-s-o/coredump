@@ -13,8 +13,5 @@ description = """
 Force coredump creation on panics.
 """
 
-[badges]
-gitlab = { repository = "d-e-s-o/coredump", branch = "master" }
-
 [dependencies]
 libc = "0.2"
