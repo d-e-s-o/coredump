@@ -11,6 +11,7 @@ build-test:cargo:
   script:
   - rustc --version && cargo --version
   - cargo build --all --verbose
+  - cargo build --all --verbose --release
   - cargo test --all --verbose
 
 lint:clippy:
