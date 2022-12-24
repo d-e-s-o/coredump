@@ -1,4 +1,4 @@
-[![pipeline](https://gitlab.com/d-e-s-o/coredump/badges/master/pipeline.svg)](https://gitlab.com/d-e-s-o/coredump/commits/master)
+[![pipeline](https://github.com/d-e-s-o/coredump/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/d-e-s-o/coredump/actions/workflows/ci.yml)
 [![crates.io](https://img.shields.io/crates/v/coredump.svg)](https://crates.io/crates/coredump)
 [![Docs](https://docs.rs/coredump/badge.svg)](https://docs.rs/coredump)
 [![rustc](https://img.shields.io/badge/rustc-1.34+-blue.svg)](https://blog.rust-lang.org/2019/04/11/Rust-1.34.0.html)
