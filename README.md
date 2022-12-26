@@ -45,7 +45,7 @@ happen).
 After a panic has happened, the core file can be investigated using
 [`gdb(1)`][man-1-gdb], like so:
 ```bash
-$ gdb <paniced-binary> <core-file>
+$ rust-gdb <paniced-binary> <core-file>
 ```
 
 By default a core file as created by this crate will reside in the
