@@ -26,8 +26,8 @@ use std::process::id as pid;
 use libc::getrlimit;
 use libc::kill;
 use libc::rlimit;
-use libc::RLIMIT_CORE;
 use libc::setrlimit;
+use libc::RLIMIT_CORE;
 use libc::SIGQUIT;
 
 
@@ -180,7 +180,7 @@ fn enable_core_dumps() -> Result<(), (Str, Error)> {
   }
 
   // As an application we are only allowed to touch the soft limit
-  // (`rlim_cur`), while the hard limits acts as a ceiling. We bump it
+  // (`rlim_cur`), while the hard limit acts as a ceiling. We bump it
   // as high as we can.
   limit.rlim_cur = limit.rlim_max;
 
