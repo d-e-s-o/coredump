@@ -1,5 +1,6 @@
 Unreleased
 ----------
+- Fix potential reporting of misleading errors
 - Switched to using GitHub Actions as CI provider
 
 

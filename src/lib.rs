@@ -1,6 +1,6 @@
 // lib.rs
 
-// Copyright (C) 2019-2020 Daniel Mueller <deso@posteo.net>
+// Copyright (C) 2019-2022 Daniel Mueller <deso@posteo.net>
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 //! A module for making the program dump core on panics (on a best
@@ -151,8 +151,7 @@ fn dump_core_and_quit(dir: &Path) -> Result<(), (Str, Error)> {
     let _ = set_current_dir(cur_dir);
     Err(err)
   } else {
-    Err(IoError::new(ErrorKind::Other, "SIGQUIT did not kill the process").into())
-      .ctx(|| "failed to force core dump")
+    Ok(())
   }
 }
 
